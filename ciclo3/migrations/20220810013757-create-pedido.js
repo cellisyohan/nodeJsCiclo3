@@ -8,16 +8,12 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      dataPedido: {
+      data: {
         type: Sequelize.DATEONLY
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
       },
       ClienteId : {
         allowNull: false,
-        tgype : Sequelize.INTEGER,
+        type : Sequelize.INTEGER,
         references:{
           model:'clientes',
           key:'id'
@@ -25,6 +21,11 @@ module.exports = {
         onDelete:'CASCADE',
         onUpdate:'CASCADE'
       },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+     
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
