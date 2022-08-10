@@ -11,6 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Pedido.belongsTo(models.Cliente);//pedido pertence a "1" cliente
+      Pedido.belongsToMany(models.Servico, {
+        through:'ItemPerdido'
+      });//pedido pertence a muito serviços
+        
     }
   }
   Pedido.init({
