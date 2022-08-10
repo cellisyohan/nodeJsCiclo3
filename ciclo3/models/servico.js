@@ -14,9 +14,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Servico.init({
-    firstName: DataTypes.STRING,
-    lastName: DataTypes.STRING,
-    email: DataTypes.STRING
+    nome: DataTypes.STRING,
+    descricao: DataTypes.STRING
+    
   }, {
     sequelize,
     modelName: 'Servico',

@@ -14,9 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   ItemPedido.init({
-    firstName: DataTypes.STRING,
-    lastName: DataTypes.STRING,
-    email: DataTypes.STRING
+    quantidade: DataTypes.INTEGER,
+    valor: DataTypes.FLOAT
   }, {
     sequelize,
     modelName: 'ItemPedido',

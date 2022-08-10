@@ -14,9 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Pedido.init({
-    firstName: DataTypes.STRING,
-    lastName: DataTypes.STRING,
-    email: DataTypes.STRING
+    dataPedido: DataTypes.DATEONLY
   }, {
     sequelize,
     modelName: 'Pedido',
